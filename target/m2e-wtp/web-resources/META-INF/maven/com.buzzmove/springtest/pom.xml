@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.buzzmove</groupId>
+  <artifactId>springtest</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>springtest Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+    
+    <!--Spring library version -->
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>4.0.9.RELEASE</spring.version>
+		<junit.version>3.8.1</junit.version>
+		<jdk.version>1.7</jdk.version>
+		<servlet.version>3.1.0</servlet.version>
+        <servlet.version>3.0.1</servlet.version>
+        <jstl.version>1.2</jstl.version>
+        <servletapi.version>3.1.0</servletapi.version>
+        <resource.directory>src/main/resources</resource.directory>
+        <existent.property.file>src/main/resources/messages.properties</existent.property.file>
+        <hsqldb.version>2.3.2</hsqldb.version>
+	</properties>
+  
+  <dependencies>
+   		<!-- junit dependencies -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>3.8.1</version>
+	      <scope>test</scope>
+	    </dependency>
+	    
+        <!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		
+		
+		
+		<!--End Spring dependencies -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+ 		<dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+            <scope>runtime</scope>
+        </dependency>
+
+		<!-- JDBC Dependece -->
+		<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-jdbc</artifactId>
+        	<version>${spring.version}</version>
+        </dependency>
+        
+        <!-- JDBC Dependece hsqldb-->
+        <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
+		<dependency>
+		   <groupId>org.hsqldb</groupId>
+    	   <artifactId>hsqldb</artifactId>
+    	   <version>2.3.2</version>
+		</dependency>
+
+		 
+		
+		<!-- JDBC Dependece mysql-->
+		<!--<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.30</version>
+		</dependency> -->
+		 
+  </dependencies>
+  
+  <build>
+    <finalName>springtest</finalName>
+  </build>
+</project>
